@@ -22,7 +22,7 @@ a {
 
 .callToAction {
   background-color: #fca120;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   border-radius: 25px;
   position: absolute;
   right: 5%;
@@ -36,6 +36,10 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.heroSection li {
+  list-style: none;
 }
 
 .nav ul li {
@@ -84,17 +88,13 @@ h2 {
   margin: 0;
 }
 
-.heroSection li {
-  list-style: none;
-}
-
 .heroSection i {
   color: white;
 }
 
 .callToAction2 {
   background-color: #fca120;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   border-radius: 25px;
   color: black;
 }
@@ -109,12 +109,12 @@ h2 {
 
 .about h3 {
   font-size: 24px;
-  padding: .5em;
+  padding: 0.5em;
 }
 
 .about p {
   padding: 0;
-  margin: .5em;
+  margin: 0.5em;
   width: 70%;
   font-size: 20px;
 }
@@ -148,13 +148,8 @@ h4 {
 }
 
 .skills div:nth-child(1) h4,
-.skills div:nth-child(4) h4{
+.skills div:nth-child(4) h4 {
   color: #fca120;
-}
-
-.skills div:nth-child(2),
-.skills div:nth-child(2) {
-  width: 50%;
 }
 
 .skills div ul {
@@ -200,7 +195,7 @@ h4 {
 
 .allProjects a {
   background-color: #fca120;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   border-radius: 25px;
   color: black;
 }
@@ -249,7 +244,7 @@ textarea {
 input[type=submit] {
   background-color: #fca120;
   border: none;
-  padding: .7em 2em;
+  padding: 0.7em 2em;
   border-radius: 25px;
   color: black;
   font-size: 16px;
@@ -261,7 +256,7 @@ footer {
   margin-top: 3em;
 }
 
-footer ul {
+.footerlinks {
   display: flex;
   padding: 1em;
   justify-content: center;
@@ -269,7 +264,6 @@ footer ul {
   gap: 1em;
 }
 
-footer li a {
+.footerlinks a {
   color: white;
 }
-
