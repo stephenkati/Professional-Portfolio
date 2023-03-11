@@ -11,14 +11,14 @@ body {
   background-color: #151413;
 }
 
+a {
+  text-decoration: none;
+}
+
 .logo a {
   font-size: 24px;
   font-weight: 600;
   color: #fca120;
-}
-
-a {
-  text-decoration: none;
 }
 
 .callToAction {
@@ -59,6 +59,13 @@ a {
 
 .nav ul li {
   list-style-type: none;
+}
+
+.allProjects a {
+  background-color: #fca120;
+  padding: 0.5em 1em;
+  border-radius: 25px;
+  color: black;
 }
 
 .nav ul a {
@@ -124,7 +131,7 @@ h2 {
   color: #151413;
 }
 
-@media only screen and (max-width:545px) {
+@media only screen and (max-width: 545px) {
   .desktopMenu {
     display: none;
   }
@@ -219,6 +226,7 @@ h4 {
 .skills div ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .skills div:nth-child(1),
@@ -242,10 +250,6 @@ h4 {
 .skills div:nth-child(1) h4,
 .skills div:nth-child(4) h4 {
   color: #fca120;
-}
-
-.skills div ul {
-  list-style: none;
 }
 
 .projects {
@@ -286,13 +290,6 @@ h4 {
   line-height: 26px;
 }
 
-.allProjects a {
-  background-color: #fca120;
-  padding: 0.5em 1em;
-  border-radius: 25px;
-  color: black;
-}
-
 .allProjects a:hover,
 .allProjects a:focus {
   background-color: white;
@@ -307,8 +304,7 @@ h4 {
 
 .contact h3 {
   font-size: 26px;
-  margin-top: .5em;
-  
+  margin-top: 0.5em;
 }
 
 .contact p {
@@ -395,7 +391,7 @@ footer {
   justify-content: center;
   list-style: none;
   gap: 1.5em;
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
 }
 
 .socialAccounts li i {
