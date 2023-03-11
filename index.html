@@ -11,14 +11,27 @@
 <body>
     <div class="container">
 
-        <div class="nav">
+        <nav class="nav">
             <div class="logo"> <a href="#">Katuli</a> </div>
-            <ul>
-                <li> <a href="">Projects</a> </li>
-                <li> <a href="">About</a> </li>
-                <li> <a href="">Contact</a> </li>
+
+            <ul class="desktopMenu">
+                <li> <a href="#projects">Projects</a> </li>
+                <li> <a href="#about">About</a> </li>
+                <li> <a href="#contact">Contact</a> </li>
             </ul>
-            <a href="" class="callToAction" > Contact me </a>
+
+            <i class="fa-solid fa-bars" id="menu"></i>
+           
+            <a href="#contact" class="callToAction" > Contact me </a>
+        </nav>
+
+        <div class="mobile" id="mobile">
+            <i class="fa-solid fa-x" id="close"></i>
+            <ul class="mobileMenu">
+                <li> <a href="#projects">Projects</a> </li>
+                <li> <a href="#about">About</a> </li>
+                <li> <a href="#contact">Contact</a> </li>
+            </ul>
         </div>
 
         <div class="heroSection">
@@ -34,7 +47,7 @@
             <a href="" class="callToAction2">Contact me</a>
         </div>
 
-        <div class="about">
+        <div class="about" id="about">
             <h3>About me</h3>
             <p>Full Stack developer with a passion for JavaScript.</p>
             <p>Whether it's a small business website or a large-scale enterprise app, I'm committed to delivering high-quality, scalable, and maintainable solutions. Let's bring your ideas to life!</p>
@@ -81,14 +94,15 @@
             </div>
         </div>
 
-        <div class="projects">
+        <div class="projects" id="projects">
             <h3>My Projects</h3>
             <div class="allProjects">
                 <div class="projectCard project1">
                     <img src="./images/leaderboard.png" alt="example of how a leaderboard looks like">
                     <div class="cardBody">
                         <h4 class="cardTitle">Leaderboard App</h4>
-                        <p class="cardInfo">A website that displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.</p>
+                        <p class="cardInfo">A website that displays scores submitted by different players.</p>
+                        <p>It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.</p>
                         <div class="actions">
                             <a target="_blank" href="https://stephenkati.github.io/Leaderboard/dist/" class="liveDemo">Live Demo</a>
                             <a target="_blank" href="https://github.com/stephenkati/Leaderboard" class="sourceCode">Source Code</a>
@@ -100,7 +114,8 @@
                     <img src="./images/todolist.png" alt="Example of a to do list">
                     <div class="cardBody">
                         <h4 class="cardTitle">To Do List</h4>
-                        <p class="cardInfo">This app that lets users create tasks that they would like to do and complete them. Users can add, update, delete, mark as completed and remove completed activities.</p>
+                        <p class="cardInfo">This app that lets users create tasks that they would like to do and complete them.</p>
+                        <p> Users can add, update, delete, mark as completed and remove completed activities.</p>
                         <div class="actions">
                             <a target="_blank" href="https://stephenkati.github.io/To-Do-List/dist" class="liveDemo">Live Demo</a>
                             <a target="_blank" href="https://github.com/stephenkati/To-Do-List" class="sourceCode">Source Code</a>
@@ -109,10 +124,11 @@
                 </div>
 
                 <div class="projectCard project3">
-                    <img src="./images/awsbooks.png" alt="Example of a book in a bookslist">
+                    <img src="./images/awesomebooks.png" alt="Example of a book in a bookslist">
                     <div class="cardBody">
                         <h4 class="cardTitle">Awesome Books</h4>
-                        <p class="cardInfo">This website for listing books and Arthurs, it stores data in the local storage. This project uses ES-6 and JavaScript modules.</p>
+                        <p class="cardInfo">This website for listing books and Arthurs, it stores data in the local storage. </p>
+                        <p>This project uses ES-6 and JavaScript modules.</p>
                         <div class="actions">
                             <a target="_blank" href="https://stephenkati.github.io/Awesome-books-ES6/" class="liveDemo">Live Demo</a>
                             <a target="_blank" href="https://github.com/stephenkati/Awesome-books-ES6" class="sourceCode">Source Code</a>
@@ -124,7 +140,7 @@
                     <img src="./images/globalcanvas.png" alt="Landing page for Global canvas art concert">
                     <div class="cardBody">
                         <h4 class="cardTitle">Global Canvas</h4>
-                        <p class="cardInfo">Global Canvas Art Exhibition Concert is a concert for showcasing art and giving artists and art lovers an opportunity to explore different galleries, be challenged as well as meet new people with similar interests.</p>
+                        <p class="cardInfo">Global Canvas Art Exhibition Concert is a concert for showcasing art and giving artists and art lovers an opportunity to explore different galleries.</p>
                         <div class="actions">
                             <a target="_blank" href="https://stephenkati.github.io/Global-Canvas-Art-Exhibition-Concert-/" class="liveDemo">Live Demo</a>
                             <a target="_blank" href="https://github.com/stephenkati/Global-Canvas-Art-Exhibition-Concert-" class="sourceCode">Source Code</a>
@@ -146,7 +162,7 @@
             </div>
         </div>
 
-        <div class="contact">
+        <div class="contact" id="contact">
             <h3>Contact</h3>
             <p>I am committed to creating a warm and welcoming environment for everyone, and I look forward to getting to hear from you. So don't be shy, drop me a message and let's get started!</p>
 
@@ -160,10 +176,16 @@
 
         <footer>
             <ul class="footerlinks">
-                <li> <a href="">Katuli</a> </li>
-                <li> <a href="">Projects</a> </li>
-                <li> <a href="">About</a> </li>
-                <li> <a href="">Contact</a> </li>
+                <li> <a href="#" class="footerLogo">Katuli</a> </li>
+                <li> <a href="#projects" class="footerlink">Projects</a> </li>
+                <li> <a href="#about" class="footerlink">About</a> </li>
+                <li> <a href="#contact" class="footerlink">Contact</a> </li>
+            </ul>
+            <ul class="socialAccounts">
+                <li> <a href="https://www.linkedin.com/in/stephen-katuli/"><i class="fa-brands fa-linkedin"></i></a> </li>
+                <li> <a href="https://github.com/stephenkati"></a> <i class="fa-brands fa-github"></i> </li>
+                <li> <a href="https://twitter.com/Stephen57913145"></a> <i class="fa-brands fa-twitter"></i> </li>
+                <li> <a href="stephenkatuli88@gmail.com"> </a><i class="fa-solid fa-envelope"></i> </li>
             </ul>
         </footer>
 
