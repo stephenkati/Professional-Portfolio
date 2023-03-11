@@ -11,9 +11,10 @@ body {
   background-color: #151413;
 }
 
-.logo {
+.logo a {
   font-size: 24px;
   font-weight: 600;
+  color: #fca120;
 }
 
 a {
@@ -27,15 +28,29 @@ a {
   position: absolute;
   right: 5%;
   color: black;
+  display: block;
 }
 
-.nav ul {
+.callToAction:hover {
+  color: #151413;
+  background-color: white;
+}
+
+.desktopMenu {
   display: flex;
   gap: 2em;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#menu {
+  display: none;
+}
+
+.mobileMenu {
+  display: none;
 }
 
 .heroSection li {
@@ -46,8 +61,12 @@ a {
   list-style-type: none;
 }
 
-.nav a {
+.nav ul a {
   color: white;
+}
+
+#close {
+  display: none;
 }
 
 .heroSection {
@@ -68,6 +87,7 @@ h1 {
 }
 
 h2 {
+  text-align: center;
   padding: 0;
   margin: 0;
 }
@@ -99,6 +119,66 @@ h2 {
   color: black;
 }
 
+.callToAction2:hover {
+  background-color: white;
+  color: #151413;
+}
+
+@media only screen and (max-width:545px) {
+  .desktopMenu {
+    display: none;
+  }
+
+  #menu {
+    display: block;
+    position: absolute;
+    right: 1.5em;
+    color: #fca120;
+  }
+
+  #close {
+    display: block;
+  }
+
+  .mobile {
+    position: absolute;
+    display: none;
+    padding: 1em;
+    right: 0;
+    left: 100px;
+    top: 0;
+    bottom: 100px;
+    color: white;
+    background-color: #fca120;
+  }
+
+  .mobile i {
+    color: #151413;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    font-size: 20px;
+    list-style: none;
+    padding: 1em;
+  }
+
+  .mobileMenu a {
+    color: #151413;
+  }
+
+  .callToAction {
+    display: none;
+  }
+
+  .heroSection p {
+    width: 90%;
+    padding: 1em;
+  }
+}
+
 .about {
   display: flex;
   flex-direction: column;
@@ -109,7 +189,6 @@ h2 {
 
 .about h3 {
   font-size: 24px;
-  padding: 0.5em;
 }
 
 .about p {
@@ -137,14 +216,27 @@ h4 {
   font-size: 22px;
 }
 
+.skills div ul {
+  margin: 0;
+  padding: 0;
+}
+
 .skills div:nth-child(1),
 .skills div:nth-child(4) {
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: #151413;
+  background-color: #1b1a19;
   color: white;
   text-align: center;
+}
+
+.skills div:nth-child(2),
+.skills div:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
 }
 
 .skills div:nth-child(1) h4,
@@ -174,21 +266,22 @@ h4 {
   width: 100%;
   flex-wrap: wrap;
   gap: 1em;
+  background-color: #151413;
+  color: white;
+  padding: 1.5em;
 }
 
-.project1,
-.project2,
-.project3,
-.project4,
-.project5 {
-  width: 45%;
+.projectCard {
+  width: 40%;
+  min-width: 250px;
 }
 
 .allProjects img {
-  width: 100%;
+  width: 80%;
 }
 
 .allProjects p {
+  width: 80%;
   font-size: 17px;
   line-height: 26px;
 }
@@ -200,6 +293,12 @@ h4 {
   color: black;
 }
 
+.allProjects a:hover,
+.allProjects a:focus {
+  background-color: white;
+  color: black;
+}
+
 .contact {
   display: flex;
   flex-direction: column;
@@ -208,6 +307,8 @@ h4 {
 
 .contact h3 {
   font-size: 26px;
+  margin-top: .5em;
+  
 }
 
 .contact p {
@@ -222,6 +323,7 @@ form {
   gap: 1em;
   align-items: center;
   width: 30%;
+  min-width: 200px;
 }
 
 input[type=text],
@@ -233,12 +335,21 @@ input[type=email] {
   margin: 0;
 }
 
+input[type=text]:hover,
+input[type=email]:hover {
+  border: 2px solid #fca120;
+}
+
 textarea {
   border: 2px solid black;
   width: 100%;
   height: 100px;
   padding: 0;
   margin: 0;
+}
+
+textarea:hover {
+  border: 2px solid #fca120;
 }
 
 input[type=submit] {
@@ -249,6 +360,11 @@ input[type=submit] {
   color: black;
   font-size: 16px;
   cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #151413;
+  color: #fca120;
 }
 
 footer {
@@ -264,6 +380,24 @@ footer {
   gap: 1em;
 }
 
-.footerlinks a {
+.footerlink {
   color: white;
+}
+
+.footerLogo {
+  color: #fca120;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.socialAccounts {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 1.5em;
+  padding-bottom: .5em;
+}
+
+.socialAccounts li i {
+  color: #fca120;
 }
