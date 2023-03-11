@@ -16,5 +16,5 @@ closeMenu.addEventListener('click', (e) => {
 menuLinks.forEach((link) => {
   link.addEventListener('click', () => {
     mobileMenu.style.display = 'none';
-  })
-})
+  });
+});
