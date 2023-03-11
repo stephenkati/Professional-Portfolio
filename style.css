@@ -2,3 +2,398 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.nav {
+  display: flex;
+  padding: 1.5em;
+  align-items: center;
+  position: relative;
+  background-color: #151413;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fca120;
+}
+
+.callToAction {
+  background-color: #fca120;
+  padding: 0.5em 1em;
+  border-radius: 25px;
+  position: absolute;
+  right: 5%;
+  color: black;
+  display: block;
+}
+
+.callToAction:hover {
+  color: #151413;
+  background-color: white;
+}
+
+.desktopMenu {
+  display: flex;
+  gap: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#menu {
+  display: none;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.heroSection li {
+  list-style: none;
+}
+
+.nav ul li {
+  list-style-type: none;
+}
+
+.allProjects a {
+  background-color: #fca120;
+  padding: 0.5em 1em;
+  border-radius: 25px;
+  color: black;
+}
+
+.nav ul a {
+  color: white;
+}
+
+#close {
+  display: none;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  height: 70vh;
+  color: white;
+  background-color: #1b1a19;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.heroSection p {
+  width: 60%;
+  text-align: center;
+  padding: 2em 0;
+  margin: 0;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.heroSection ul {
+  display: flex;
+  gap: 1em;
+  padding: 1em 0;
+  margin: 0;
+}
+
+.heroSection i {
+  color: white;
+}
+
+.callToAction2 {
+  background-color: #fca120;
+  padding: 0.5em 1em;
+  border-radius: 25px;
+  color: black;
+}
+
+.callToAction2:hover {
+  background-color: white;
+  color: #151413;
+}
+
+@media only screen and (max-width: 545px) {
+  .desktopMenu {
+    display: none;
+  }
+
+  #menu {
+    display: block;
+    position: absolute;
+    right: 1.5em;
+    color: #fca120;
+  }
+
+  #close {
+    display: block;
+  }
+
+  .mobile {
+    position: absolute;
+    display: none;
+    padding: 1em;
+    right: 0;
+    left: 100px;
+    top: 0;
+    bottom: 100px;
+    color: white;
+    background-color: #fca120;
+  }
+
+  .mobile i {
+    color: #151413;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    font-size: 20px;
+    list-style: none;
+    padding: 1em;
+  }
+
+  .mobileMenu a {
+    color: #151413;
+  }
+
+  .callToAction {
+    display: none;
+  }
+
+  .heroSection p {
+    width: 90%;
+    padding: 1em;
+  }
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  align-items: center;
+  text-align: center;
+}
+
+.about h3 {
+  font-size: 24px;
+}
+
+.about p {
+  padding: 0;
+  margin: 0.5em;
+  width: 70%;
+  font-size: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.skills div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+.skills div ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skills div:nth-child(1),
+.skills div:nth-child(4) {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #1b1a19;
+  color: white;
+  text-align: center;
+}
+
+.skills div:nth-child(2),
+.skills div:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+}
+
+.skills div:nth-child(1) h4,
+.skills div:nth-child(4) h4 {
+  color: #fca120;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+
+.projects h3 {
+  font-size: 22px;
+}
+
+.allProjects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 1em;
+  background-color: #151413;
+  color: white;
+  padding: 1.5em;
+}
+
+.projectCard {
+  width: 40%;
+  min-width: 250px;
+}
+
+.allProjects img {
+  width: 80%;
+}
+
+.allProjects p {
+  width: 80%;
+  font-size: 17px;
+  line-height: 26px;
+}
+
+.allProjects a:hover,
+.allProjects a:focus {
+  background-color: white;
+  color: black;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact h3 {
+  font-size: 26px;
+  margin-top: 0.5em;
+}
+
+.contact p {
+  width: 60%;
+  text-align: center;
+  font-size: 18px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  width: 30%;
+  min-width: 200px;
+}
+
+input[type=text],
+input[type=email] {
+  border: 2px solid black;
+  width: 100%;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+input[type=text]:hover,
+input[type=email]:hover {
+  border: 2px solid #fca120;
+}
+
+textarea {
+  border: 2px solid black;
+  width: 100%;
+  height: 100px;
+  padding: 0;
+  margin: 0;
+}
+
+textarea:hover {
+  border: 2px solid #fca120;
+}
+
+input[type=submit] {
+  background-color: #fca120;
+  border: none;
+  padding: 0.7em 2em;
+  border-radius: 25px;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #151413;
+  color: #fca120;
+}
+
+footer {
+  background-color: #1b1a19;
+  margin-top: 3em;
+}
+
+.footerlinks {
+  display: flex;
+  padding: 1em;
+  justify-content: center;
+  list-style: none;
+  gap: 1em;
+}
+
+.footerlink {
+  color: white;
+}
+
+.footerLogo {
+  color: #fca120;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.socialAccounts {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+.socialAccounts li i {
+  color: #fca120;
+}
