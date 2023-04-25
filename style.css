@@ -290,6 +290,32 @@ h4 {
   line-height: 26px;
 }
 
+.stack {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.stack ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: left;
+  width: 100%;
+  padding: 0;
+}
+
+.stack li {
+  background-color: white;
+  color: #151413;
+  padding: .2em .3em;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
 .allProjects a:hover,
 .allProjects a:focus {
   background-color: white;
