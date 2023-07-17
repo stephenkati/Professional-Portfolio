@@ -5,173 +5,181 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stephen's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.2.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/7415ea4535.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <div class="container">
+<body class="bg-white text-black w-screen">
+    <div class="">
 
-        <nav class="nav">
-            <div class="logo"> <a href="#">Katuli</a> </div>
+        <div class="h-screen w-screen flex flex-col items-center justify-around">
 
-            <ul class="desktopMenu">
-                <li> <a href="#projects">Projects</a> </li>
-                <li> <a href="#about">About</a> </li>
-                <li> <a href="#contact">Contact</a> </li>
-            </ul>
+            <nav class="w-full flex justify-between py-2 px-8 text-primary bg-transparent items-center">
+                <div class="btn btn-primary"> <a href="#">Katuli</a> </div>
+    
+                <div class="flex justify-between hidden md:flex text-blue-950">
+                    <a href="#projects" class="hover:text-secondary-focus uppercase font-bold text-xl p-2">Projects</a>
+                    <a href="#about" class="hover:text-secondary-focus uppercase font-bold text-xl p-2">About</a>
+                    <a href="#contact" class="hover:text-secondary-focus uppercase font-bold text-xl p-2">Contact</a>
+                </div>
+    
+                <a href="#contact" class="btn btn-secondary hover:bg-secondary-focus rounded-full" > Contact me </a>
+                
+                <i class="fa-solid fa-bars md:hidden" id="menu" ></i>
+            </nav>
+    
+            <div class="w-full bg-primary-focus text-primary font-bold hidden md:hidden p-2 h-screen flex flex-col gap-4" id="mobile">
+                <i class="fa-solid fa-x py-4 text-white" id="close"></i>
+                <div class="py-4 flex flex-col gap-2">
+                    <a href="#projects" class="bg-white p-2 rounded-md mobileMenu">Projects</a>
+                    <a href="#about" class="bg-white p-2 rounded-md mobileMenu">About</a>
+                    <a href="#contact" class="bg-white p-2 rounded-md mobileMenu">Contact</a>
+                </div>
+            </div>
+    
+            <div class="w-full flex flex-col p-1 gap-2 items-center bg-blue-950 ">
+                <h1 class="text-3xl text-white">Hello,</h1>
+                <h2 class="text-4xl text-white text-center">I'm Stephen Katuli, a <span class="text-secondary-focus">Full Stack developer</span> </h2>
+                <p class="text-white text-center w-full max-w-sm">I use my experience in programming to create visually stunning and user-friendly websites to help bring your vision to life and create a website that your users will love.</p>
+                <div class="flex text-white text-xl justify-center items-center gap-2">
+                    <a href="https://www.linkedin.com/in/stephen-katuli/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/stephenkati"></a> <i class="fa-brands fa-github"></i>
+                    <a href="https://twitter.com/Stephen57913145"></a> <i class="fa-brands fa-twitter"></i>
+                    <a href="stephenkatuli88@gmail.com"> </a><i class="fa-solid fa-envelope"></i>
+                </div>
+                <a href="#contact" class="callToAction2 btn btn-secondary hover:bg-secondary-focus rounded-full">Contact me</a>
+            </div>
 
-            <i class="fa-solid fa-bars" id="menu"></i>
-           
-            <a href="#contact" class="callToAction" > Contact me </a>
-        </nav>
-
-        <div class="mobile" id="mobile">
-            <i class="fa-solid fa-x" id="close"></i>
-            <ul class="mobileMenu">
-                <li> <a href="#projects">Projects</a> </li>
-                <li> <a href="#about">About</a> </li>
-                <li> <a href="#contact">Contact</a> </li>
-            </ul>
+            <h3 class="text-2xl font-bold text-blue-950">My Projects</h3>
         </div>
 
-        <div class="heroSection">
-            <h1>Hello,</h1>
-            <h2>I am Stephen Katuli, <span>a Full Stack developer</span> </h2>
-            <p>I use my experience in programming to create visually stunning and user-friendly websites to help bring your vision to life and create a website that your users will love.</p>
-            <ul>
-                <li> <a href="https://www.linkedin.com/in/stephen-katuli/"><i class="fa-brands fa-linkedin"></i></a> </li>
-                <li> <a href="https://github.com/stephenkati"></a> <i class="fa-brands fa-github"></i> </li>
-                <li> <a href="https://twitter.com/Stephen57913145"></a> <i class="fa-brands fa-twitter"></i> </li>
-                <li> <a href="stephenkatuli88@gmail.com"> </a><i class="fa-solid fa-envelope"></i> </li>
-            </ul>
-            <a href="#contact" class="callToAction2">Contact me</a>
-        </div>
 
-        <div class="projects" id="projects">
-            <h3>My Projects</h3>
-            <div class="allProjects">
+        <div class="flex flex-col gap-2 items-center p-5" id="projects">
 
-                <div class="projectCard project3">
-                    <img src="./images/smart_wallet.png" alt="Categories page for smart wallet app">
-                    <div class="cardBody">
-                        <h4 class="cardTitle">Smart wallet</h4>
-                        <p class="cardInfo">This is a web application which helps users manage their budget, empowers users to make informed financial decisions and achieve their goals financially. </p>
-                        <div class="stack">
-                            <ul>
-                                <li>Ruby on Rails</li>
-                                <li>Ruby</li>
-                                <li>Hotwire</li>
-                                <li>Tailwind</li>
-                            </ul>
+            <div class="flex w-full flex-wrap gap-4 p-4 bg-blue-950 justify-around">
+
+                <div class="w-full max-w-sm text-white py-2">
+                    <img src="./images/smart_wallet.png" alt="Categories page for smart wallet app" class="w-full max-w-sm">
+                    <div class="p-2">
+                        <h4 class="font-bold text-2xl text-secondary-focus">Smart wallet</h4>
+                        <p class="">This is a web application which helps users manage their budget, empowers users to make informed financial decisions and achieve their goals financially. </p>
+                        <div class="w-full py-2">
+                            <div class="flex flex-wrap-reverse justify-between w-full gap-2">
+                                <div class="w-max bg-white rounded-lg text-black p-1">Ruby on Rails</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">Ruby</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">Hotwire</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">Tailwind</div>
+                            </div>
                         </div>
-                        <div class="actions">
-                            <a target="_blank" rel="noopener" href="https://smart-wallet-hfqh.onrender.com/" class="liveDemo">Live Demo</a>
-                            <a target="_blank" rel="noopener" href="https://github.com/stephenkati/Smart_Wallet" class="sourceCode">Source Code</a>
+                        <div class="w-full flex gap-2 flex-wrap">
+                            <a target="_blank" rel="noopener" href="https://smart-wallet-hfqh.onrender.com/" class="liveDemo btn btn-primary rounded-full">Live Demo</a>
+                            <a target="_blank" rel="noopener" href="https://github.com/stephenkati/Smart_Wallet" class="sourceCode btn btn-primary rounded-full">Source Code</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="projectCard project">
-                    <img src="./images/Unsplash image hub.png" alt="unsplash image hub">
-                    <div class="cardBody">
-                        <h4 class="cardTitle">Image Hub</h4>
-                        <p class="cardInfo">A web app that provides unsplash image collections.It provides detailed information for each collection a user clicks.</p>
-                        <div class="stack">
-                            <ul>
-                                <li>React</li>
-                                <li>Redux</li>
-                                <li>JavaScript</li>
-                                <li>Css</li>
-                                <li>Unsplash Api</li>
-                            </ul>
+                <div class="w-full max-w-sm text-white py-2">
+                    <img src="./images/Unsplash image hub.png" alt="unsplash image hub" class="w-full max-w-sm">
+                    <div class="p-2">
+                        <h4 class="font-bold text-2xl text-secondary-focus">Image Hub</h4>
+                        <p class="">A web app that provides unsplash image collections.It provides detailed information for each collection a user clicks.</p>
+                        <div class="w-full py-2">
+                            <div class="flex flex-wrap-reverse justify-between w-full gap-2">
+                                <div class="w-max bg-white rounded-lg text-black p-1">React</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">Redux</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">JavaScript</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">Css</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">Unsplash Api</div>
+                            </div>
                         </div>
-                        <div class="actions">
-                            <a target="_blank" rel="noopener" href="https://image-hub.onrender.com/" class="liveDemo">Live Demo</a>
-                            <a target="_blank" rel="noopener" href="https://github.com/stephenkati/Unsplash-Image-Hub" class="sourceCode">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="projectCard project6">
-                    <img src="./images/Space Traveler's Hub.png" alt="example of how a leaderboard looks like">
-                    <div class="cardBody">
-                        <h4 class="cardTitle">Space Traveler's Hub</h4>
-                        <p class="cardInfo">Space Traveler’s Hub provides commercial and scientific space travel services with the real live data from the SpaceX API.</p>
-                        <div class="stack">
-                            <ul>
-                                <li>React</li>
-                                <li>Redux</li>
-                                <li>JavaScript</li>
-                                <li>Css</li>
-                                <li>SpaceX-Api</li>
-                            </ul>
-                        </div>
-                        <div class="actions">
-                            <a target="_blank" rel="noopener" href="https://space-travellers-hub-rjf0.onrender.com/" class="liveDemo">Live Demo</a>
-                            <a target="_blank" rel="noopener" href="https://github.com/stephenkati/React-group-project-practice" class="sourceCode">Source Code</a>
+                        <div class="w-full flex gap-2 flex-wrap">
+                            <a target="_blank" rel="noopener" href="https://image-hub.onrender.com/" class="liveDemo btn btn-primary rounded-full">Live Demo</a>
+                            <a target="_blank" rel="noopener" href="https://github.com/stephenkati/Unsplash-Image-Hub" class="sourceCode btn btn-primary rounded-full">Source Code</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="projectCard project6">
-                    <img src="./images/pokemon.png" alt="example of how a leaderboard looks like">
-                    <div class="cardBody">
-                        <h4 class="cardTitle">Pokemon favourites</h4>
-                        <p class="cardInfo">It display data from the Pokeapi and involvement API. It allows users to like, comment and view comments on different pokemon characters</p>
-                        <div class="stack">
-                            <ul>
-                                <li>JavaScript</li>
-                                <li>Css</li>
-                                <li>HTML</li>
-                                <li>Poke-Api</li>
-                                <li>Involvement Api</li>
-                            </ul>
+                <div class="w-full max-w-sm text-white py-2">
+                    <img src="./images/Space Traveler's Hub.png" alt="example of how a leaderboard looks like" class="w-full max-w-sm">
+                    <div class="p-2">
+                        <h4 class="font-bold text-2xl text-secondary-focus">Space Traveler's Hub</h4>
+                        <p class="">Space Traveler’s Hub provides commercial and scientific space travel services with the real live data from the SpaceX API.</p>
+                        <div class="w-full py-2">
+                            <div class="flex flex-wrap-reverse justify-between w-full gap-2">
+                                <div class="w-max bg-white rounded-lg text-black p-1">React</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">Redux</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">JavaScript</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">Css</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">SpaceX-Api</div>
+                            </div>
                         </div>
-                        <div class="actions">
-                            <a target="_blank" rel="noopener" href="https://stephenkati.github.io/JavaScript-capstone-group-project/dist/" class="liveDemo">Live Demo</a>
-                            <a target="_blank" rel="noopener" href="https://github.com/stephenkati/JavaScript-capstone-group-project" class="sourceCode">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="projectCard project1">
-                    <img src="./images/leaderboard.png" alt="example of how a leaderboard looks like">
-                    <div class="cardBody">
-                        <h4 class="cardTitle">Leaderboard App</h4>
-                        <p class="cardInfo">A website that displays scores submitted by different players.It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.</p>
-                        <div class="stack">
-                            <ul>
-                                <li>JavaScript</li>
-                                <li>Css</li>
-                                <li>HTML</li>
-                                <li>Leaderboard API </li>
-                            </ul>
-                        </div>
-                        <div class="actions">
-                            <a target="_blank" rel="noopener" href="https://stephenkati.github.io/Leaderboard/dist/" class="liveDemo">Live Demo</a>
-                            <a target="_blank" rel="noopener" href="https://github.com/stephenkati/Leaderboard" class="sourceCode">Source Code</a>
+                        <div class="w-full flex gap-2 flex-wrap">
+                            <a target="_blank" rel="noopener" href="https://space-travellers-hub-rjf0.onrender.com/" class="liveDemo btn btn-primary rounded-full">Live Demo</a>
+                            <a target="_blank" rel="noopener" href="https://github.com/stephenkati/React-group-project-practice" class="sourceCode btn btn-primary rounded-full">Source Code</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="projectCard project4">
-                    <img src="./images/Math magician.png" alt="Math magician app">
-                    <div class="cardBody">
-                        <h4 class="cardTitle">Math Magician</h4>
-                        <p class="cardInfo">Math Magician is a project that lets you make simple mathematic calculations and uses an API to display some motivational quotes.</p>
-                        <div class="stack">
-                            <ul>
-                                <li>React</li>
-                                <li>Redux</li>
-                                <li>JavaScript</li>
-                                <li>Css</li>
-                                <li>HTML</li>
-                                <li>Quotes Api</li>
-                            </ul>
+                <div class="w-full max-w-sm text-white py-2">
+                    <img src="./images/pokemon.png" alt="example of how a leaderboard looks like" class="w-full max-w-sm">
+                    <div class="p-2">
+                        <h4 class="font-bold text-2xl text-secondary-focus">Pokemon favourites</h4>
+                        <p class="">It display data from the Pokeapi and involvement API. It allows users to like, comment and view comments on different pokemon characters</p>
+                        <div class="w-full py-2">
+                            <div class="flex flex-wrap-reverse justify-between w-full gap-2">
+                                <div class="w-max bg-white rounded-lg text-black p-1">JavaScript</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">Css</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">HTML</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">Poke-Api</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">Involvement Api</div>
+                            </div>
                         </div>
-                        <div class="actions">
-                            <a target="_blank" rel="noopener" href="https://calculator-app-07x6.onrender.com/" class="liveDemo">Live Demo</a>
-                            <a target="_blank" rel="noopener" href="https://github.com/stephenkati/Math-Magician-1" class="sourceCode">Source Code</a>
+                        <div class="w-full flex gap-2 flex-wrap">
+                            <a target="_blank" rel="noopener" href="https://stephenkati.github.io/JavaScript-capstone-group-project/dist/" class="liveDemo btn btn-primary rounded-full">Live Demo</a>
+                            <a target="_blank" rel="noopener" href="https://github.com/stephenkati/JavaScript-capstone-group-project" class="sourceCode btn btn-primary rounded-full">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full max-w-sm text-white py-2">
+                    <img src="./images/leaderboard.png" alt="example of how a leaderboard looks like" class="w-full max-w-sm">
+                    <div class="p-2">
+                        <h4 class="font-bold text-2xl text-secondary-focus">Leaderboard App</h4>
+                        <p class="">A website that displays scores submitted by different players.It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.</p>
+                        <div class="w-full py-2">
+                            <div class="flex flex-wrap-reverse justify-between w-full gap-2">
+                                <div class="w-max bg-white rounded-lg text-black p-1">JavaScript</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">Css</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">HTML</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">Leaderboard API </div>
+                            </div>
+                        </div>
+                        <div class="w-full flex gap-2 flex-wrap">
+                            <a target="_blank" rel="noopener" href="https://stephenkati.github.io/Leaderboard/dist/" class="liveDemo btn btn-primary rounded-full">Live Demo</a>
+                            <a target="_blank" rel="noopener" href="https://github.com/stephenkati/Leaderboard" class="sourceCode btn btn-primary rounded-full">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full max-w-sm text-white py-2">
+                    <img src="./images/Math magician.png" alt="Math magician app" class="w-full max-w-sm">
+                    <div class="p-2">
+                        <h4 class="font-bold text-2xl text-secondary-focus">Math Magician</h4>
+                        <p class="">Math Magician is a project that lets you make simple mathematic calculations and uses an API to display some motivational quotes.</p>
+                        <div class="w-full py-2">
+                            <div class="flex flex-wrap-reverse justify-between w-full gap-2">
+                                <div class="w-max bg-white rounded-lg text-black p-1">React</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">Redux</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">JavaScript</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">Css</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">HTML</div>
+                                <div class="w-max bg-white rounded-lg text-black p-1">Quotes Api</div>
+                            </div>
+                        </div>
+                        <div class="w-full flex gap-2 flex-wrap">
+                            <a target="_blank" rel="noopener" href="https://calculator-app-07x6.onrender.com/" class="liveDemo btn btn-primary rounded-full">Live Demo</a>
+                            <a target="_blank" rel="noopener" href="https://github.com/stephenkati/Math-Magician-1" class="sourceCode btn btn-primary rounded-full">Source Code</a>
                         </div>
                     </div>
                 </div>
@@ -179,62 +187,73 @@
             </div>
         </div>
 
-        <div class="about" id="about">
-            <h3>About me</h3>
+        <div class="flex flex-col text-center justify-center gap-4 p-4 items-center text-blue-950" id="about">
+            <h3 class="text-2xl font-bold">About me</h3>
             <p>Full Stack developer with a passion for Ruby on Rails.</p>
-            <p>Whether it's a small business website or a large-scale enterprise app, I'm committed to delivering high-quality, scalable, and maintainable solutions. Let's bring your ideas to life!</p>
-            <p>Looking for my next job.</p>
+            <p class="max-w-sm text-center">Whether it's a small business website or a large-scale enterprise app, I'm committed to delivering high-quality, scalable, and maintainable solutions. Let's bring your ideas to life!</p>
+            <p class="font-bold">Looking for my next job.</p>
         </div>
 
-        <div class="skills">
-            <div class="programmingLanguages">
-                <h4>Languages</h4>
-                <ul>
-                    <li>Ruby on Rails</li>
-                    <li>Ruby</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>Redux</li>
-                    <li>Css</li>
-                    <li>HTML</li>
-                </ul>
-            </div>
-
-            <div class="tools">
-                <h4>Tools</h4>
-                <ul>
-                    <li>Git</li>
-                    <li>Jest</li>
-                    <li>Figma</li>
-                    <li>MySQL</li>
-                    <li>GitFlow</li>
-                    <li>Postman</li>
-                    <li>Webpack</li>
-                    <li>Bootstrap</li>
-                    <li>Tailwind</li>
-                    <li>Stimulus</li>
-                    <li>Turbo Rails</li>
-                </ul>
+        <div class="w-full flex flex-col items-center gap-4 p-4">
+            <h3 class="font-bold text-3xl text-blue-950">Skills & Languages</h3>
+    
+            <div class="p-4 flex flex-col items-center gap-4">
+    
+                <div class="p-2 flex flex-col gap-2 items-center">
+                    <h4 class="font-bold text-2xl text-blue-950">Frond-End</h4>
+                    <div class="flex flex-wrap justify-between gap-4">
+                        <img src="/images/Icons/react.svg" alt="React" class="h-10 w-10">
+                        <img src="/images/Icons/redux.svg" alt="Redux" class="h-10 w-10">
+                        <img src="/images/Icons/javascript.svg" alt="JavaScript" class="h-10 w-10">
+                        <img src="/images/Icons/html5.svg" alt="Html5" class="h-10 w-10">
+                        <img src="/images/Icons/css3.svg" alt="CSS3" class="h-10 w-10">
+                        <img src="/images/Icons/tailwind-css.svg" alt="Tailwind CSS" class="h-10 w-10">
+                        <img src="/images/Icons/bootstrap.svg" alt="" class="h-10 w-10">
+                    </div>
+                </div>
+                 <div class="p-2 flex flex-col gap-2 items-center">
+                    <h4 class="font-bold text-2xl text-blue-950">Back-End</h4>
+                    <div class="flex flex-wrap justify-between gap-4">
+                        <img src="/images/Icons/ruby.svg" alt="Ruby" class="h-10 w-10">
+                        <img src="/images/Icons/Rails.png" alt="Ruby on Rails" class="h-10 w-10">
+                        <img src="/images/Icons/postgresql.svg" alt="PostgreSQL" class="h-10 w-10">
+                        <img src="/images/Icons/mysql.svg" alt="MySQL" class="h-10 w-10">
+                        <!-- <img src="" alt="" class="h-10 w-10"> -->
+                    </div>
+                </div>
+                 <div class="p-2 flex flex-col gap-2 items-center">
+                    <h4 class="font-bold text-2xl text-blue-950">Tools & Technologies</h4>
+                    <div class="flex flex-wrap justify-between gap-4">
+                        <img src="/images/Icons/git.svg" alt="Git" class="h-10 w-10">
+                        <img src="/images/Icons/figma.svg" alt="Figma" class="h-10 w-10">
+                        <img src="/images/Icons/photoshop.svg" alt="Photoshop" class="h-10 w-10">
+                        <img src="/images/Icons/illustrator.svg" alt="illustrator" class="h-10 w-10">
+                        <!-- <img src="" alt="" class="h-10 w-10"> -->
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="contact" id="contact">
-            <h3>Contact</h3>
-            <p>I am committed to creating a warm and welcoming environment for everyone, and I look forward to getting to hear from you. So don't be shy, drop me a message and let's get started!</p>
+        <div class="flex flex-wrap items-center text-center p-4 gap-7 justify-center w-full" id="contact">
+            <div class="flex flex-col gap-2 text-blue-950">
+                <h3 class="font-bold text-3xl">Contact Me</h3>
+                <p class="max-w-sm">I am committed to creating a warm and welcoming environment for everyone, and I look forward to getting to hear from you.</p>
+                <p>So don't be shy, drop me a message and let's get started!</p>
+            </div>
 
-            <form action="https://formspree.io/f/xyyapkva" method="POST">
-                <input type="text" name="name" id="name" placeholder="Your name please..." required>
-                <input type="email" name="email" id="email" placeholder="Your email please..." required>
-                <textarea type="text" name="message" id="message" placeholder="Write your message here..." required> </textarea>
-                <input type="submit" name="submit" id="submit" value="Send">
+            <form action="https://formspree.io/f/xyyapkva" method="POST" class="flex flex-col p-2 gap-4">
+                <input class="bg-blue-950 text-white rounded-full p-2" type="text" name="name" id="name" placeholder="Your name please..." required>
+                <input class="bg-blue-950 text-white rounded-full p-2" type="email" name="email" id="email" placeholder="Your email please..." required>
+                <textarea class="bg-blue-950 text-white rounded h-40 p-4" type="text" name="message" id="message" placeholder="Write your message here..." required> </textarea>
+                <button name="submit" id="submit" class="btn btn-secondary text-white">Send</button>
             </form>
         </div>
 
-        <footer>
-            <ul class="footerlinks">
-                <li> <a href="#" class="footerLogo">Katuli</a> </li>
-                <li> <a href="stephenkatuli88@gmail.com">Email </a><i class="fa-solid fa-envelope"></i> </li>
-            </ul>
+        <footer class="bg-blue-950 text-white flex justify-center p-2">
+            <div class="flex flex-col">
+                <a href="#" class="btn btn-primary">Katuli</a>
+                <p> stephenkatuli88@gmail.com </p>
+            </div>
         </footer>
 
     </div>
